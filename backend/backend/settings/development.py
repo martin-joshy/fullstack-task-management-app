@@ -186,7 +186,6 @@ EMAIL_PORT = 587
 # dj-rest-auth settings
 
 SITE_ID = 1
-
 REST_AUTH = {
     "PASSWORD_RESET_SERIALIZER": "auth.serializers.CustomPasswordResetSerializer",
     "USE_JWT": True,
