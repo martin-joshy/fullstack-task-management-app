@@ -35,7 +35,6 @@ FRONTEND_DOMAIN = "http://localhost:5173"
 
 ALLOWED_HOSTS = ["*"]
 
-
 REST_FRAMEWORK = {
     "DEFAULT_AUTHENTICATION_CLASSES": (
         "rest_framework_simplejwt.authentication.JWTAuthentication",
