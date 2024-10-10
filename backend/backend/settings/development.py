@@ -210,6 +210,7 @@ RESET_PASSWORD_REDIRECT_URL = FRONTEND_DOMAIN + "/login/new-password/"
 
 ASGI_APPLICATION = "backend.asgi.application"
 
+
 CHANNEL_LAYERS = {
     "default": {
         "BACKEND": "channels_redis.core.RedisChannelLayer",
