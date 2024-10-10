@@ -14,19 +14,17 @@ jobs:
     steps:
     - name: Check if Docker Compose is running
       run: |
-        sudo su
         cd /home/ubuntu/martin/docker_compose_ec2
-        total_services=$(docker compose config --services | wc -l)
-
-        running_services=$(docker compose ps | grep -c 'Up')
-
+        total_services=$(sudo docker compose config --services | wc -l)
+        
+        running_services=$(sudo docker compose ps | grep -c 'Up')
+        
         if [ "$total_services" -eq "$running_services" ]; then
           echo "All services are running."
         else
           echo "Some services are not running. Starting all services..."
           sudo docker compose up -d
         fi
-
     - name: Pull latest Django backend image
       run: |
         cd /home/ubuntu/martin/docker_compose_ec2
